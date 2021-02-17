@@ -25,10 +25,10 @@ async function getCountryData() {
     // const countryField = "belgium";
 
     // zoeken met deels naam of volledige naam
-    const url = `https://restcountries.eu/rest/v2/name/${countryField}`
+    // const url = `https://restcountries.eu/rest/v2/name/${countryField}`
 
     // alleen zoeken met volledige naam
-    // const url = `https://restcountries.eu/rest/v2/name/${countryField}?fullText=true`
+    const url = `https://restcountries.eu/rest/v2/name/${countryField}?fullText=true`
 
     // maakt een lege error ruimte welke gevuld word bij een onjuiste invoering
     const errorMessage = document.getElementById('error-message');
