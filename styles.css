@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.content {
+    margin: -60px auto 0;
+    width: 1024px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    font-size: 80px;
+    font-weight: normal;
+}
+
+div,
+p {
+    color: white;
+}
+
+#country-container {
+    max-width: 720px;
+    margin: 40px auto;
+    background-color: hsla(0, 0%, 0%, 0.3);
+    border-radius: 20px;
+    z-index: 1;
+}
+
+#country {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+.info-left {
+    margin: auto 8%;
+}
+
+.info-right {
+    margin: 10px 40px 20px auto;
+}
+
+#earth {
+    width: 350px;
+    height: 350px;
+    margin: -70px auto 20px;
+    z-index: 1;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    height: 40px;
+    width: 260px;
+    border: none;
+    font-size: 30px;
+    margin-right: 4px;
+    padding-left: 8px;
+    background-color: #f6f6f6;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    height: 42px;
+    width: 120px;
+    border: none;
+    font-size: 30px;
+}
+
+button:hover {
+    background-color: #98C12A;
+}
+
+button:focus {
+    outline: none;
+}
+
+#error-message {
+    text-align: center;
+    color: red;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+img#flag {
+    width: 200px;
+    height: 125px;
+}
