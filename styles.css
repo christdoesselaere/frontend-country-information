@@ -75,9 +75,10 @@ input:focus {
 
 button {
     height: 42px;
-    width: 120px;
+    width: 140px;
     border: none;
     font-size: 30px;
+    font-family: 'Roboto', sans-serif;
 }
 
 button:hover {
