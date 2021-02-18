@@ -1,6 +1,6 @@
 # Werkende uitwerking => 
-##Eigen server    [Get your country info!](https://doesselaere.nl/country-info/)
-##GitHub.io       [Get your country info!](https://christdoesselaere.github.io/frontend-country-information/)
+## Eigen server    [Get your country info!](https://doesselaere.nl/country-info/)
+## GitHub.io       [Get your country info!](https://christdoesselaere.github.io/frontend-country-information/)
 
 # Opdrachtbeschrijving
 
