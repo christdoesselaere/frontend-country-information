@@ -123,9 +123,9 @@ async function getCountryData() {
         console.clear()
         console.log(`Invalid country.`);
         if (countryField === '') {
-            errorMessage.textContent = `Please enter a valid country. You can use full english name or Alpha-2 country codes.`
+            errorMessage.textContent = `Please enter a valid country. You can use full english name or alpha-2 country codes.`
         } else {
-            errorMessage.textContent = `${countryField} doesn't exist, please enter a valid country. You can use full english name or Alpha-2 country codes.`
+            errorMessage.textContent = `${countryField} doesn't exist, please enter a valid country. You can use full english name or alpha-2 country codes.`
         }
     }
 
