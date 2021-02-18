@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
+html,
+body {
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+}
+
 .content {
-    margin: -60px auto 0;
-    width: 1024px;
+    margin: -26px auto 0;
+    max-width: 1024px;
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,10 +20,13 @@
 .title {
     display: flex;
     justify-content: center;
+    text-align: center;
     color: white;
     font-family: 'Pacifico', cursive;
-    font-size: 80px;
+    font-size: 36px;
     font-weight: normal;
+    position: relative;
+    z-index: 1;
 }
 
 div,
@@ -24,48 +35,57 @@ p {
 }
 
 #country-container {
+    width: 340px;
     max-width: 720px;
-    margin: 40px auto;
+    /*margin: 6px auto 0;*/
+    margin: 86px auto 0;
     background-color: hsla(0, 0%, 0%, 0.3);
     border-radius: 20px;
+    position: relative;
     z-index: 1;
 }
 
 #country {
     display: flex;
-    flex-direction: row;
-    align-items: baseline;
+    flex-direction: column;
+    align-items: center;
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .info-left {
-    margin: auto 8%;
+    margin: 20px 8% 0;
 }
 
 .info-right {
-    margin: 10px 40px 20px auto;
+    margin: 0 0 10px;
+    padding: 0 26px;
+    text-align: center;
 }
 
 #earth {
-    width: 350px;
-    height: 350px;
-    margin: -70px auto 20px;
+    width: 200px;
+    height: 200px;
+    margin: -36px auto 6px;
     z-index: 1;
 }
 
 .input {
     display: flex;
     justify-content: center;
+    position: relative;
+    margin: -130px 0 0;
+    z-index: 2;
 }
 
 input {
     height: 40px;
-    width: 260px;
-    border: none;
-    font-size: 30px;
-    margin-right: 4px;
-    padding-left: 8px;
+    width: 180px;
+    border: solid 1px black;
+    border-right: solid 5px black;
+    border-radius: 20px 0 0 20px;
+    font-size: 18px;
+    padding: 0 0 0 18px;
     background-color: #f6f6f6;
 }
 
@@ -76,13 +96,16 @@ input:focus {
 button {
     height: 42px;
     width: 140px;
-    border: none;
+    border: solid 1px black;
+    border-radius: 0 21px 21px 0;
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
+    padding: 0;
+    background-color: hsl(191, 86%, 89%);
 }
 
 button:hover {
-    background-color: #98C12A;
+    background-color: hsl(76, 64%, 46%);
 }
 
 button:focus {
@@ -94,9 +117,137 @@ button:focus {
     color: red;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
+    position: relative;
+    margin: 190px 0 0;
+    z-index: 1;
 }
 
 img#flag {
-    width: 200px;
-    height: 125px;
+    min-width: 100px;
+    width: 100px;
+    min-height: 63px;
+    height: 63px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    height: 50px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: hsla(0, 0%, 0%, 0.3);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+/*.footer span {*/
+/*    justify-self: center;*/
+/*}*/
+
+.footer a {
+    text-decoration: none;
+    color: hsl(191, 86%, 89%);
+}
+
+.footer a:hover {
+    margin: auto;
+    text-decoration: none;
+    color: hsl(76, 64%, 46%);
+}
+
+/* css for tablets and bigger */
+@media screen and (min-width: 576px) {
+    html,
+    body {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .content {
+        margin: -40px auto 0;
+    }
+
+    .title {
+        /*margin: 40px 0 0;*/
+        font-size: 60px;
+    }
+
+    #country-container {
+        width: auto;
+        max-width: 720px;
+        margin: 40px auto;
+        background-color: hsla(0, 0%, 0%, 0.3);
+        border-radius: 20px;
+        position: relative;
+        z-index: 1;
+    }
+
+    #country {
+        flex-direction: row;
+        align-items: baseline;
+        font-size: 18px;
+    }
+
+    .info-left {
+        margin: auto 8%;
+    }
+
+    .info-right {
+        margin: 10px 40px 20px auto;
+        padding: 0;
+        text-align: left;
+    }
+
+    .input {
+        margin: 0;
+    }
+
+    input {
+        height: 42px;
+        width: 260px;
+        font-size: 30px;
+        border: none;
+        border-right: solid 5px black;
+
+    }
+
+    button {
+        height: 42px;
+        width: 140px;
+        border: none;
+    }
+
+    #earth {
+        width: 300px;
+        height: 300px;
+        margin: -50px auto 20px;
+    }
+
+    #error-message {
+        margin: 20px 0 0;
+    }
+
+    img#flag {
+        min-width: 200px;
+        width: 200px;
+        min-height: 125px;
+        height: 125px;
+    }
+
+    .footer {
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 40px;
+    }
+}
+
+/* css for monitor and bigger */
+@media screen and (min-width: 900px) {
+
 }

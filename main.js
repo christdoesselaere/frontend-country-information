@@ -1,6 +1,8 @@
+// koppelt het element met id search-button uit index.html met dit js
 const searchButton = document.getElementById('search-button');
 searchButton.addEventListener('click', getCountryData);
 
+// koppelt het element met id search-field uit index.html met dit js
 const searchField = document.getElementById('search-field')
 searchField.addEventListener('keyup', setQuery);
 
@@ -22,7 +24,7 @@ async function getCountryData() {
 
     // haal het land uit het input field
     const countryField = document.getElementById('search-field').value;
-    // const countryField = "belgium";
+    // const countryField = "belgium"; // voor het testen, zodat niet iedere keer een land ingevoerd hoeft te worden (vorige regel word overschreven)
 
     // zoeken met deels naam of volledige naam
     // const url = `https://restcountries.eu/rest/v2/name/${countryField}`
@@ -34,14 +36,14 @@ async function getCountryData() {
     const errorMessage = document.getElementById('error-message');
     errorMessage.textContent = '';
 
-    // // sla de referentie op naar de country-container waarin de informatie van een land staat
+    // // sla de referentie op naar de country-container waarin de informatie van een land staat (kopie vanuit uitwerking, aangezien ik de oplossing niet gemaakt kreeg)
     const previousSearchResult = document.getElementById('country');
-    // // als deze referentie bestaat (en er dus al een land op de pagina wordt weergegeven) dan halen we deze eerst weg
+    // // als deze referentie bestaat (en er dus al een land op de pagina wordt weergegeven) dan halen we deze eerst weg (kopie vanuit uitwerking, aangezien ik de oplossing niet gemaakt kreeg)
     if (previousSearchResult) {
         countryContainer.removeChild(previousSearchResult);
     }
 
-    //
+    // kijkt op eventuele errors in het blok code en roept eventueel de catch aan
     try {
         console.clear();
         const response = await axios.get(url);
@@ -50,9 +52,10 @@ async function getCountryData() {
         // laat de inhoud van de API zien
         console.log(countryInfo);
 
-        //een div element word aangemaakt met id country
+        //een div element word aangemaakt en toegevoegd aan de country-container div
         const country = document.createElement('div');
         country.setAttribute('id', 'country');
+        countryContainer.appendChild(country);
 
         const countryLeft = document.createElement('div');
         countryLeft.setAttribute('class', 'info-left');
@@ -92,9 +95,6 @@ async function getCountryData() {
         countryLanguage.textContent = languageDescription(countryInfo.languages);
         countryRight.appendChild(countryLanguage);
 
-        // de country div word toegevoegd aan de country-container div
-        countryContainer.appendChild(country);
-
         // functie om de valuta's weer te geven
         function currencyDescription(currencies) {
             if (currencies.length >= 2) {
@@ -123,9 +123,9 @@ async function getCountryData() {
         console.clear()
         console.log(`Invalid country.`);
         if (countryField === '') {
-            errorMessage.textContent = `Please enter a valid country.`
+            errorMessage.textContent = `Please enter a valid country. You can use full english name or Alpha-2 country codes.`
         } else {
-            errorMessage.textContent = `${countryField} doesn't exist, please enter a valid country.`
+            errorMessage.textContent = `${countryField} doesn't exist, please enter a valid country. You can use full english name or Alpha-2 country codes.`
         }
     }
 

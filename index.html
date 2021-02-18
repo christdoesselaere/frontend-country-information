@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="parallax.css">
     <link rel="stylesheet" href="styles.css">
-    <title>Title</title>
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" sizes="72x72" href="./images/earth-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./images/earth-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" href="./images/earth-touch-icon-57x57.png">
+    <link rel="apple-touch-startup-image" href="./images/earth-splash-startup.png">
+    <title>Get your country info!</title>
 </head>
 <body>
 <div id='stars'></div>
@@ -18,8 +26,11 @@
         <button id="search-button">Discover</button>
     </div>
     <div class="output">
-        <p id="error-message"></p>
         <div id="country-container"></div>
+        <p id="error-message"></p>
+    </div>
+    <div class="footer">
+        <span>Made by <a href="https://github.com/christdoesselaere" target="_blank">Christ van Doesselaere</a>.</span><span>Parallax effect by <a href="https://codepen.io/saransh/pen/BKJun" target="_blank">@screenshake</a>.</span>
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
